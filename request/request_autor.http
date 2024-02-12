@@ -1,0 +1,11 @@
+POST http://{{host}}/autor
+Content-Type: application/json
+
+< ./autor.json
+
+###
+
+POST http://{{host}}/autor
+Content-Type: application/json
+
+< ./autor_error.json
