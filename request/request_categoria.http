@@ -1,0 +1,11 @@
+POST http://{{host}}/categoria
+Content-Type: application/json
+
+< ./categoria.json
+
+###
+
+POST http://{{host}}/categoria
+Content-Type: application/json
+
+< ./categoria_erro.json
