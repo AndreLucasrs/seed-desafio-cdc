@@ -2,7 +2,6 @@ package com.deveficiente.seeddesafiocdc.controller;
 
 import com.deveficiente.seeddesafiocdc.dto.AutorDTO;
 import com.deveficiente.seeddesafiocdc.repository.AutorRepository;
-import com.deveficiente.seeddesafiocdc.service.ValidaEmail;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
