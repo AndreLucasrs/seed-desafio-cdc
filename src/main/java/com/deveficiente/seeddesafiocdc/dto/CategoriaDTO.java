@@ -1,14 +1,14 @@
 package com.deveficiente.seeddesafiocdc.dto;
 
 import com.deveficiente.seeddesafiocdc.model.Categoria;
-import com.deveficiente.seeddesafiocdc.service.NomeUnico;
+import com.deveficiente.seeddesafiocdc.service.UniqueValue;
 import jakarta.validation.constraints.NotBlank;
 
 public class CategoriaDTO {
 
     private Long id;
     @NotBlank
-    @NomeUnico
+    @UniqueValue(fieldName = "nome", domainClass = Categoria.class, message = "Nome de categoria ja existe")
     private String nome;
 
     public CategoriaDTO() {

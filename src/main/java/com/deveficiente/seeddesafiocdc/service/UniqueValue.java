@@ -10,12 +10,16 @@ import java.lang.annotation.Target;
 
 @Target({ElementType.FIELD, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = ValidaCategoria.class)
-public @interface NomeUnico {
+@Constraint(validatedBy = UniqueValueValidator.class)
+public @interface UniqueValue {
 
-    String message() default "Nome de categoria ja existe";
+    String message() default "ja existe";
 
     Class<?>[] groups() default {};
 
     Class<? extends Payload>[] payload() default {};
+
+    String fieldName();
+
+    Class<?> domainClass();
 }

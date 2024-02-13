@@ -1,7 +1,7 @@
 package com.deveficiente.seeddesafiocdc.dto;
 
 import com.deveficiente.seeddesafiocdc.model.Autor;
-import com.deveficiente.seeddesafiocdc.service.EmailUnico;
+import com.deveficiente.seeddesafiocdc.service.UniqueValue;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -17,7 +17,7 @@ public class AutorDTO {
 
     @Email
     @NotBlank
-    @EmailUnico
+    @UniqueValue(fieldName = "email", domainClass = Autor.class, message = "Ja existe email")
     private String email;
 
     @Size(max = 400)
