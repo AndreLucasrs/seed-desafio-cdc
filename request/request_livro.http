@@ -1,0 +1,6 @@
+POST http://{{host}}/livro
+Content-Type: application/json
+
+< ./livro.json
+
+###
