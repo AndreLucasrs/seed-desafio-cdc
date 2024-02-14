@@ -31,6 +31,13 @@ public class Autor {
     public Autor() {
     }
 
+    public Autor(String nome, String email, String descricao, LocalDateTime created) {
+        this.nome = nome;
+        this.email = email;
+        this.descricao = descricao;
+        this.created = created;
+    }
+
     public Long getId() {
         return id;
     }

@@ -38,11 +38,7 @@ public class AutorDTO {
     }
 
     public Autor toModel() {
-        var model = new Autor();
-        model.setDescricao(descricao);
-        model.setEmail(email);
-        model.setNome(nome);
-        return model;
+        return new Autor(nome, email, descricao, created);
     }
 
     public Long getId() {
