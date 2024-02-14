@@ -4,3 +4,5 @@ Content-Type: application/json
 < ./livro.json
 
 ###
+
+GET http://{{host}}/livro

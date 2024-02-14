@@ -1,11 +1,11 @@
 {
-  "titulo": "o livro",
+  "titulo": "o livro 2",
   "resumo": "jorge3@teste.com",
   "sumario": "um livro sobre um livro",
   "preco": 25,
   "numeroPaginas": 101,
-  "isbn": "teste",
+  "isbn": "teste2",
   "lancar": "2024-02-16T20:58:30.123Z",
-  "categoriaId": 3,
+  "categoriaId": 1,
   "autorId": 1
 }
