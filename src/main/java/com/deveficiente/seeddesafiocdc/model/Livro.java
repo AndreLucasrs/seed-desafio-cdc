@@ -40,10 +40,10 @@ public class Livro {
     @Future
     private LocalDateTime lancar;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private Categoria categoria;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private Autor autor;
 
     public Livro() {
