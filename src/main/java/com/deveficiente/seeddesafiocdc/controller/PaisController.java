@@ -1,7 +1,6 @@
 package com.deveficiente.seeddesafiocdc.controller;
 
 import com.deveficiente.seeddesafiocdc.dto.PaisDTO;
-import com.deveficiente.seeddesafiocdc.model.Pais;
 import com.deveficiente.seeddesafiocdc.repository.PaisRepository;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.PostMapping;
