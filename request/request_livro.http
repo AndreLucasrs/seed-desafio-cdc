@@ -6,3 +6,8 @@ Content-Type: application/json
 ###
 
 GET http://{{host}}/livro
+
+
+###
+
+GET http://{{host}}/livro/1
