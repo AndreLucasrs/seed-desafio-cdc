@@ -1,5 +1,6 @@
 package com.deveficiente.seeddesafiocdc.controller;
 
+import com.deveficiente.seeddesafiocdc.dto.InfoLivroDTO;
 import com.deveficiente.seeddesafiocdc.dto.LivroDTO;
 import com.deveficiente.seeddesafiocdc.model.Autor;
 import com.deveficiente.seeddesafiocdc.model.Categoria;
@@ -7,7 +8,9 @@ import com.deveficiente.seeddesafiocdc.model.Livro;
 import com.deveficiente.seeddesafiocdc.repository.LivroRepository;
 import com.deveficiente.seeddesafiocdc.service.FindObjectById;
 import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,10 +38,17 @@ public class LivroController {
     }
 
     @GetMapping
-    public List<LivroDTO> buscar() {
+    public List<InfoLivroDTO> buscar() {
         var livros = new ArrayList<Livro>();
         livroRepository.findAll().forEach(livros::add);
-        return livros.stream().map(LivroDTO::new).toList();
+        return livros.stream().map(InfoLivroDTO::new).toList();
+    }
+
+    @GetMapping("/{id}")
+    public LivroDTO livroDTO(@PathVariable Long id) {
+        var livro = livroRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+        return new LivroDTO(livro);
     }
 
 }

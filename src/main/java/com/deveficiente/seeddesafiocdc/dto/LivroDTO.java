@@ -50,7 +50,6 @@ public class LivroDTO {
     @NotNull
     private Long autorId;
 
-    @NotNull
     public LivroDTO() {
     }
 
