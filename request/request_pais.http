@@ -1,0 +1,6 @@
+POST http://{{host}}/pais
+Content-Type: application/json
+
+< ./pais.json
+
+###
