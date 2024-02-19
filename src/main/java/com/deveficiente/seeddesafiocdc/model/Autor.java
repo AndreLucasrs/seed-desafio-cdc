@@ -31,11 +31,10 @@ public class Autor {
     public Autor() {
     }
 
-    public Autor(String nome, String email, String descricao, LocalDateTime created) {
+    public Autor(String nome, String email, String descricao) {
         this.nome = nome;
         this.email = email;
         this.descricao = descricao;
-        this.created = created;
     }
 
     public Long getId() {
@@ -56,6 +55,10 @@ public class Autor {
 
     public LocalDateTime getCreated() {
         return created;
+    }
+
+    public void setCreated(LocalDateTime created) {
+        this.created = created;
     }
 
     public void setNome(String nome) {
